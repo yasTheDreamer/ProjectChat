@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  
+    <script defer src="../js/server.js"></script>
+
+    <title>Register</title>
+</head>
+<body>
+    <div class="containerr">
+        <div class = "email_empty">
+            <% if ( email_empty ) { 
+                for(let message of email_empty) { %>
+                <div class="alert alert-danger">
+                    <p><%= message %></p>
+                </div>
+                <% }} %>
+        </div>
+
+       
+        <div class = "username">
+            <% if ( username && username.length > 0 ) { %>
+                <div class="alert alert-danger">
+                    <p><%= username %></p>
+                </div>
+                <% } %>
+        </div>
+
+        <div class = "password_empty">
+            <% if ( password_empty) { 
+                for(let message of password_empty) { %>
+                <div class="alert alert-danger">
+                    <p><%= message %></p>
+                </div>
+                <% }} %>
+        </div>
+
+        <div class="userExists">
+            <% if (userExists && userExists.length> 0) { %>
+                <div class="alert alert-danger">
+                    <p>  <%= userExists%></p>
+                </div>
+            <% } %>
+        </div>
+
+        
+            
+        <div class="header">
+            <h1>
+                Register
+            </h1>
+        </div>
+        <div class="content">
+            <form method="POST" action="/register">
+                <input type="text" name="email" id="email" placeholder="email">
+                <input type="text" name="username" id="username" placeholder="username">
+                <input type="password" name="password" id="password" placeholder="password">
+                <input type="submit" name="submit" id="submit" value="Register">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/addFriend.css">
+    <title>Add Friend</title>
+</head>
+<body>
+
+    <div class="container">
+
+            <div class="usernameNotFound">
+                <% if(usernameNotFound && usernameNotFound.length > 0) { %>
+                    <div class="alert alert-danger">
+                        <p><%= usernameNotFound %></p>
+                    </div>
+                <% } %>
+            </div>
+
+            <div class="usernameNotFound">
+                <% if(userNotFound && userNotFound.length > 0) { %>
+                    <div class="alert alert-danger">
+                        <p><%= userNotFound %></p>
+                    </div>
+                <% } %>
+            </div>
+
+            <div class="usernameNotFound">
+                <% if(notLoggedIn && notLoggedIn.length > 0) { %>
+                    <div class="alert alert-danger">
+                        <p><%= notLoggedIn %></p>
+                    </div>
+                <% } %>
+            </div>
+
+
+            <div class="header">
+                <h1>add a friend</h1>
+            </div>
+
+            <div class="content">
+                <form method =  "POST" action="/addFriend">
+                    <input type="text" name="addusername" placeholder="username">
+                    <input type="submit" name="submit" value="add">
+                </form>
+            </div>
+    </div>
+
+</body>
+</html>

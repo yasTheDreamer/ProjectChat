@@ -1,0 +1,31 @@
+{
+  "name": "chatapplication",
+  "version": "1.0.0",
+  "description": "real chat application with contacts, sessions and ids",
+  "main": "public/app.js",
+  "scripts": {
+    "devStart": "nodemon public/js/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasTheDreamer/ChatApplication.git"
+  },
+  "author": "yassine yousfi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasTheDreamer/ChatApplication/issues"
+  },
+  "homepage": "https://github.com/yasTheDreamer/ChatApplication#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "browserify": "^16.5.1",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.0",
+    "mongoose": "^5.9.25",
+    "nodemon": "^2.0.4",
+    "socket.io": "^2.3.0"
+  }
+}

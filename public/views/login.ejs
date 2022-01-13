@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="containerr">
+
+        <div class="loginemail">
+            <% if( loginemail && loginemail.length > 0) {
+                for ( let message of loginemail) { %>
+
+                <div class="alert alert-danger">
+                    <p><%=message%></p>
+                </div>
+                <% }} %>
+        </div>
+
+        <div class="loginpassword">
+
+            <% if (loginpassword && loginpassword.length > 0) { %>
+               <div class="alert alert-danger">
+                    <p><%= loginpassword %></p>
+               </div> 
+            <% } %>
+        </div>
+
+        <div class="userNotFound">
+            <% if(userNotFound && userNotFound.length > 0) { %>
+                    <div class="alert alert-danger">
+                        <p> <%= userNotFound%></p>
+
+                    </div>
+                <% } %>
+        </div>
+
+        <div class="incorrectPassword">
+            <% if(incorrectPassword && incorrectPassword.length > 0) { %>
+                    <div class="alert alert-danger">
+                        <p> <%= incorrectPassword%></p>
+
+                    </div>
+                <% } %>
+        </div>
+
+        <div class="header">
+            <h1>Login</h1>
+        </div>
+
+        <div class="content">
+            <form method= "POST" action="/login">
+                <input type="text" name="loginemail" placeholder="type in your email">
+                <input type="password" name="loginpassword" placeholder="type in tou password">
+                <input type="submit" name="submit" value="Login">
+                <a href="/register"><input type="button" value="Register"></a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
