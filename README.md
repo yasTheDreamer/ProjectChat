@@ -14,3 +14,5 @@ team :
 
     bouzeggaoui bahae eddine
     yassine yousfi
+
+note : pour pouvoir chatter il faut que les 2 utilisateurs ajoutent l'un l'autre comme ami.
